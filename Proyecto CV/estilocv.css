@@ -1,0 +1,22 @@
+body {
+    background-image: url(https://img.freepik.com/premium-photo/watercolor-light-gray-gradient-background-texture_145343-639.jpg?w=2000);
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    line-height: 150%;
+    
+}
+h1 {
+    text-shadow: 2px 2px 2px rgb(131, 131, 131);
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+  }
+
+.col-8 {
+    margin-left: 16%;
+    margin-right: 16%;
+}

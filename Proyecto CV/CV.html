@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="estilocv.css">
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+        
+    .header {
+        border: 1px solid black;
+        padding: 15px;
+    }
+        
+    .menu {
+        text-align: center;
+        padding: 15px;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+        
+    @media only screen and (max-width: 768px) {
+        [class*="col-"] {
+        width: 100%;
+        }
+    }   
+    </style>
+</head>
+<body>
+    <script src="funciones.js"></script>
+    <div class="header">
+        <img src="https://img.a.transfermarkt.technology/portrait/big/28003-1671435885.jpg?lm=1" width=100px>
+        <h1>Curriculum Vitae - Lionel Messi</h1>
+      </div>
+      
+      <div class="menu">
+        <h3>Datos personales</h3>
+        <p><button onclick="Mostrar('datosCompleto')">Datos personales</button></p>
+        <h3>Experiencia</h3>
+        <p><button onclick="Mostrar('clubesCompleto')">Clubes</button> - <button onclick="Mostrar('juvenilesCompleto')">Selección juvenil</button> - <button onclick="Mostrar('mayorCompleto')">Selección mayor</button></p>
+        <h3>Logros profesionales</h3>
+        <p><button onclick="Mostrar('titulosClubes')">Títulos en clubes</button> - <button onclick="Mostrar('titulosSeleccion')">Títulos en Selección</button> - <button onclick="Mostrar('golesClubes')">Goles en clubes</button> - <button onclick="Mostrar('golesSeleccion')">Goles en Selección</button></p>
+      </div>
+      
+      <div class="col-8" id="datosCompleto" style="display: none;">
+        <h2>Datos personales</h2>
+        <li><b>Nombres:</b> Lionel Andrés.</li>
+        <li><b>Apellidos:</b> Messi Cuccittini.</li>
+        <li><b>Fecha de nacimiento:</b> 24 de junio de 1987.</li>
+        <li><b>País de nacimiento:</b> Argentina.</li>
+        <li><b>Ciudad:</b> Rosario.</li>
+        <li><b>Estado civil:</b> Casado.</li>
+        <li><b>Hijos:</b> Tres (3).</li>
+        <p><button onclick="Ocultar('datosCompleto')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="clubesCompleto" style="display: none;">
+        <h2>Experiencia en clubes</h2>
+        <h3>FC Barcelona</h3>
+        <p>Desde 2004 hasta 2021, con un total de 778 partidos jugados, 672	goles y 268 asistencias. Obtuve un total de 35 títulos, divididos de la siguiente manera:</p>
+        <p>10 Ligas de España, 7 Copas del Rey, 8 Supercopas de España, 4 Champions League, 3 Supercopas de Europa, 3 Mundiales de Clubes.</p>
+        <p></p>
+        <img src="https://imageio.forbes.com/specials-images/imageserve/6016f605dc2db28f499c86ad/0x0.jpg?format=jpg&width=1200" width="100%" alt="Messi jugando en el FC Barcelona">
+        <h3>Paris Saint-Germain</h3>
+        <p>Desde 2021 a la actualidad, con un total de 55 partidos jugados, 25 goles y 29 asistencias. Obtuve dos títulos, distribuidos de la siguiente manera:</p>
+        <p>Una Ligue 1 y una Supercopa de Francia.</p>
+        <p></p>
+        <img src="https://st1.latestly.com/wp-content/uploads/2022/09/resize-2022-09-19T082721.223.jpg" width="100%" alt="Messi en el PSG">
+        <p><button onclick="Ocultar('clubesCompleto')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="juvenilesCompleto" style="display: none;">
+        <h2>Experiencia en Selecciones juveniles</h2>
+        <p>Desde 2004 y hasta 2005 integré la Selección argentina Sub 20, con la cual disputé el Sudamericano Colombia 2005, anotando 5 goles y logrando el tercer puesto y la clasificación a la Copa del Mundo</p>
+        <p>Ese mismo año, disputé el Mundial Holanda 2005, donde además de ser campeón fui el goleador con seis goles y fui elegido como el Mejor Jugador del Torneo.</p>
+        <p>En el año 2008 integré la Selección Sub 23 que ganó la Medalla de Oro en los Juegos Olímpicos Beijing 2008.</p>
+        <p><button onclick="Ocultar('juvenilesCompleto')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="mayorCompleto" style="display: none;">
+        <h2>Experiencia en la Selección mayor</h2>
+        <p>Desde 2005 hasta la actualidad, con un total de 172 partidos y 98 goles contando compromisos oficiales y amistosos.</p>
+        <p><b>Partidos jugados:</b> 60 en Eliminatorias Sudamericanas, 51 amistosos, 34 en Copa América, 25 en Mundiales y uno en la Copa Euroamericana (Finalissima).</p>
+        <p><b>Goles:</b> 44 en amistosos, 13 en Mundiales, 28 en Eliminatorias y 13 en Copa América.</p>
+        <p><button onclick="Ocultar('mayorCompleto')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="titulosClubes" style="display: none;">
+        <h2>Títulos en el FC Barcelona</h2>
+        <li><b>10 Ligas de España:</b> 2004/05, 2005/06, 2008/09, 2009/10, 2010/11, 2012/13, 2014/15, 2015/16, 2017/18 y 2018/19.</li>
+        <li><b>7 Copas del Rey:</b> 2008/09, 2011/12, 2014/15, 2015/16, 2016/17, 2017/18 y 2020/21.</li>
+        <li><b>8 Supercopas de España:</b> 2005/06, 2006/07, 2009/10, 2010/11, 2011/12, 2013/14, 2016/17 y 2018/19.</li>
+        <li><b>4 Champions League:</b> 2005/06, 2008/09, 2010/11 y 2014/15.</li>
+        <li><b>3 Supercops de Europa:</b> 2009/10, 2011/12 y 2015/16.</li>
+        <li><b>3 Mundiales de Clubes:</b> 2009/10, 2011/12 y 2015/16.</li>
+        <p>
+          <img src="https://editorial.uefa.com/resources/026c-12f5b73e5137-441a60af89c5-1000/juventus_v_fc_barcelona_-_uefa_champions_league_final.jpeg" width="100%" alt="Messi con la Champions 2015">
+        </p>
+        <h2>Títulos en el PSG</h2>
+        <li><b>1 Ligue 1:</b> 2021/22.</li>
+        <li><b>1 Supercopa de Francia:</b> 2022.</li>
+        <p><button onclick="Ocultar('titulosClubes')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="titulosSeleccion" style="display: none;">
+        <h2>Títulos en Selecciones juveniles</h2>
+        <li>Campeón Copa del Mundo Holanda 2005 (Sub 20).</li>
+        <li>Medalla de Oro Juegos Olímpicos Beijing 2008 (Sub 23).</li>
+        <p></p>
+        <img src="https://digitalhub.fifa.com/m/2b6682a26d7a70e3/original/zjodmoafxuzkt2ln7enn-jpg.jpg" width="100%" alt="Messi mejor jugador Mundial Sub 20 2005">
+        <h2>Títulos en Selección mayor</h2>
+        <li>Campeón Copa América Brasil 2021.</li>
+        <li>Campeón Copa Euroamericana Wembley 2022.</li>
+        <li>Campeón Copa del Mundo Qatar 2022.</li>
+        <p></p>
+        <img src="https://img.olympicchannel.com/images/image/private/f_auto/t_s_pog_staticContent_hero_xl_2x/primary/jqhiffhjy5nodl3jef7i" width="100%" alt="Messi levanta la Copa del Mundo Qatar 2022">
+        <p><button onclick="Ocultar('titulosSeleccion')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="golesClubes" style="display: none;">
+        <h2>Goles en clubes</h2>
+        <h3>FC Barcelona (672)</h3>
+        <p><iframe width="100%" height="393" src="https://www.youtube.com/embed/6ZamX1mu9Ws" title="Messi ● All 672 Goals for Barcelona ● 2004-2021 ● 🔥🔥 #messi #barcelona #goals #messigoals #football" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+        <h3>Paris Saint-Germain (24)</h3>
+        <p><iframe width="100%" height="393" src="https://www.youtube.com/embed/hBiRHLOlwH4" title="TODOS LOS GOLES DE MESSI EN EL PSG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+        <p><button onclick="Ocultar('golesClubes')">Ocultar</button></p>
+      </div>
+      <div class="col-8" id="golesSeleccion" style="display: none;">
+        <h2>Goles en la Selección argentina</h2>
+        <h3>Goles en categoría Sub 20 (14)</h3>
+        <p><iframe width="100%" height="393" src="https://www.youtube.com/embed/7h_VvjaMKuo" title="Messi: Sus goles en la sub-20 de Argentina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+        <h3>Goles en categoría Sub 23 - Juegos Olímpicos (2)</h3>
+        <p><iframe width="100%" height="393" src="https://www.youtube.com/embed/M8fCmwIPHyA" title="Messi  Extended All Goals & Highlights Olympics 2008 || FC Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+        <h3>Goles en la Selección argentina (98)</h3>
+        <p><iframe width="100%" height="393" src="https://www.youtube.com/embed/69_xfA7pCLs" title="LOS 98 GOLES DE MESSI CON ARGENTINA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+        <p><button onclick="Ocultar('golesSeleccion')">Ocultar</button></p>
+      </div>
+</body>
+</html>
